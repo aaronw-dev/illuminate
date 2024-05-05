@@ -5,11 +5,12 @@
 
 * {
   font-family: "Red Rose";
-  color: white;
+  color: #E2F2FF;
 }
 
 body {
   background-color: #01050A;
+  margin: 0;
 }
 
 h1,
@@ -22,7 +23,9 @@ p {
 }
 
 nav {
-  position: initial;
+  position: absolute;
+  top: 0;
+  z-index: 9;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -30,6 +33,10 @@ nav {
   font-size: 30px;
   color: #E2F2FF;
   gap: 20px;
+  padding: 15px;
+  padding-right: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 nav * {
@@ -58,4 +65,54 @@ nav * {
   text-decoration: underline;
   text-underline-offset: 7px;
   text-decoration-color: rgba(226, 242, 255, 1);
+}
+
+.cta-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  z-index: 10;
+}
+
+.cta-header {
+  font-size: 80px;
+}
+
+.cta-button {
+  color: #01050A;
+  font-weight: bolder;
+  font-size: 20px;
+  width: fit-content;
+  border-radius: 40px;
+  border: none;
+  padding: 5px 30px;
+  cursor: pointer;
+  background-color: #E2F2FF;
+}
+
+.star {
+  position: absolute;
+  display: block;
+  z-index: -1;
+  top: 800px;
+  height: 5px;
+  width: 5px;
+  background-color: #FFFCE5;
+  filter: blur(1px);
+  border-radius: 5px;
+}
+
+#about {
+  margin-top: 100vh;
+}
+
+@keyframes star {
+  50% {
+    opacity: 0;
+  }
 }
