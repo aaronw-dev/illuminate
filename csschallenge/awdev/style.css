@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Red Rose";
+  src: url("./style/font/RedRose.ttf");
+}
+
+* {
+  font-family: "Red Rose";
+  color: white;
+}
+
+body {
+  background-color: #01050A;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+nav {
+  position: initial;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30px;
+  color: #E2F2FF;
+  gap: 20px;
+}
+
+nav * {
+  display: block;
+}
+
+.nav-logo {
+  height: 60px;
+}
+
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  text-underline-offset: 0px;
+  text-decoration-color: rgba(0, 0, 0, 0);
+  transition: 500ms text-underline-offset, 500ms text-decoration-color;
+
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-color: rgba(226, 242, 255, 1);
+}
