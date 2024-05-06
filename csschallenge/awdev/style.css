@@ -10,6 +10,8 @@
 
 body {
   background-color: #01050A;
+  background: linear-gradient(to top left, #01050A, rgba(255, 153, 150, 0), #030911), linear-gradient(to top right, #030d1a, rgba(255, 153, 150, 0), #05101f) #01050A;
+  background-repeat: repeat-y;
   margin: 0;
 }
 
@@ -54,17 +56,18 @@ nav * {
 }
 
 .nav-links a {
+  color: #E2F2FF;
   text-decoration: none;
   text-underline-offset: 0px;
   text-decoration-color: rgba(0, 0, 0, 0);
-  transition: 500ms text-underline-offset, 500ms text-decoration-color;
-
+  transition: 500ms text-underline-offset, 500ms text-decoration-color, 500ms color;
 }
 
 .nav-links a:hover {
+  color: #c4d1db;
   text-decoration: underline;
   text-underline-offset: 7px;
-  text-decoration-color: rgba(226, 242, 255, 1);
+  text-decoration-color: rgba(196, 209, 219, 1);
 }
 
 .cta-wrapper {
@@ -93,6 +96,11 @@ nav * {
   padding: 5px 30px;
   cursor: pointer;
   background-color: #E2F2FF;
+  transition: 500ms background-color;
+}
+
+.cta-button:hover {
+  background-color: #c4d1db;
 }
 
 .star {
@@ -107,12 +115,100 @@ nav * {
   border-radius: 5px;
 }
 
-#about {
-  margin-top: 100vh;
-}
-
 @keyframes star {
   50% {
     opacity: 0;
   }
+}
+
+#about {
+  margin-top: 100vh;
+}
+
+.information-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin: auto;
+  margin-top: 100px;
+  font-size: 22px;
+}
+
+.section-header {
+  font-size: 50px;
+}
+
+.about-paragraph {
+  font-size: 22px;
+}
+
+#schedule {
+  gap: 5px;
+}
+
+.schedule-table {
+  background-color: #030911;
+  border-collapse: collapse;
+  box-shadow: 0px 5px 10px black;
+  margin-bottom: 50px;
+}
+
+.schedule-table td,
+th {
+  border: 0px solid #000000;
+  padding: 10px;
+  text-align: left;
+  color: white;
+  font-size: 18px;
+}
+
+tr:nth-child(even) {
+  background-color: #030d1a;
+}
+
+footer {
+  padding: 10px;
+}
+
+#faq {
+  align-items: start;
+}
+
+#faq .section-header {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  text-align: left;
+  overflow-y: hidden;
+  transition: 700ms height;
+  height: 125px;
+  margin-bottom: 20px;
+}
+
+.faq-item h1 {
+  cursor: pointer;
+}
+
+.faq-item.closed {
+  height: 41px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #05101f, #030911);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #E2F2FF;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #C4D1DB;
 }
