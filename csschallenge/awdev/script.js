@@ -50,6 +50,11 @@ function drawStars() {
         }
     }
 }
-
+document.querySelectorAll(".faq-item").forEach(element => {
+    console.log(element)
+    let childone = element.children[0].scrollHeight
+    let childtwo = element.children[1].scrollHeight
+    console.log(childone, childtwo)
+})
 drawStars();
 window.addEventListener("resize", drawStars)
