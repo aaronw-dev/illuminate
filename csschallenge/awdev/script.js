@@ -40,7 +40,7 @@ function drawStars() {
       position: absolute;
       top: 0; */
         let context = canvas.getContext("2d")
-        canvas.width = window.innerWidth - 16
+        canvas.width = window.innerWidth - 17
         canvas.height = getDocumentHeight()
         for (let i = 0; i < 100; i++) {
             context.beginPath();
