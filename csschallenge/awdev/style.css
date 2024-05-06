@@ -84,6 +84,7 @@ nav * {
 
 .cta-header {
   font-size: 80px;
+  text-align: center;
 }
 
 .cta-button {
@@ -184,18 +185,31 @@ footer {
   text-align: left;
   overflow-y: hidden;
   transition: 700ms height;
-  height: 125px;
+  
   margin-bottom: 20px;
+  width: 100%;
 }
 
-.faq-item h1 {
+.faq-header{
+  display: flex;
+  height: 41px;
   cursor: pointer;
+  width: 100%;
 }
 
 .faq-item.closed {
-  height: 41px;
+  height: 41px!important;
 }
 
+.expand-arrow{
+  margin-left: auto;
+  height: 41px;
+  transform: rotateY(90deg);
+  transition: 500ms transform;
+}
+.faq-item.closed .expand-arrow{
+  transform: rotateY(0deg);
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
